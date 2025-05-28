@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ge Currency</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    
+</head>
+<body>
+    <!-- hero section with navs -->
+    <section class="bg-[#003f88] h-[70vh]">
+        <div class="relative container mx-auto p-6 ">
+            <nav class="flex justify-between items-center sticky">
+                <h2 class="text-white text-3xl font-medium">Ge</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0,0,256,256" id="menuBtn" class="cursor-pointer">
+                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M0,9v2h50v-2zM0,24v2h50v-2zM0,39v2h50v-2z"></path></g></g>
+                </svg>
+            </nav>
+            <h1 class=" text-center text-white text-4xl font-medium mt-16 md:text-5xl">Ge Currency Converter</h1>
+            <p class="text-center text-gray-300 text-xl my-7 " >Find the best rates for your exchange now!</p>
+
+            <div  id="menu" class=" hidden absolute text-center p-6 bg-black top-20 right-6 text-gray-200  rounded-lg opacity-80 hover:text-gray-50 text-lg " >
+                <p >Welcome to Ge Currenncy Convert </p>
+            </div>
+
+
+
+        </div>
+        
+
+    </section>
+
+    
+    <!--  -->
+     <section class="px-6 mb-6 -mt-16 md:-mt-32">
+
+            <div class="container mx-auto bg-white p-6 rounded-lg  shadow-2xl ">
+            
+            <div class="relative flex flex-col space-y-10 md:flex-row md:space-y-0 md:space-x-6 ">
+
+                <div class="border-2 space-y-1 rounded-lg p-6 border-gray-300 md:w-1/3 hover:border-gray-400" id="eee">
+                    <p class="text-gray-400">Amount</p>
+                    <input type="text" class="w-full focus:outline-none text-2xl" value="100" id="amount"/>
+                </div>
+
+                
+                <!-- <input class="border-2 border-gray-300 p-6 rounded-xl focus:outline-gray-400 text-2xl md:w-1/3" id="amount" value="100" placeholder="Amount"></input> -->
+                <div class="border-2 space-y-1 rounded-lg p-6 border-gray-300 md:w-1/3 hover:border-gray-400">
+                    <p class="mx-1 text-gray-400">From</p>
+                    <div class="flex items-center space-x-1 currencyOPt">
+                        <img src="https://flagsapi.com/US/shiny/64.png" alt="US Flage" class="w-10 h-10 rounded-lg object-cover" id="fromImg">
+
+                        <select name="form" id="fromValue" class="selectTest w-full  rounded-lg focus:outline-none text-xl cursor-pointer">
+                            <option value="USD">USD</option>
+                           
+                        
+                        </select>
+
+                    </div>
+                    
+                </div>
+
+                <div class="flex justify-center md:items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-10 h-10 fill-[#003f88] rotate-90 md:rotate-0">
+                        <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M32 96l320 0 0-64c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l96 96c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-96 96c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6l0-64L32 160c-17.7 0-32-14.3-32-32s14.3-32 32-32zM480 352c17.7 0 32 14.3 32 32s-14.3 32-32 32l-320 0 0 64c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-96-96c-6-6-9.4-14.1-9.4-22.6s3.4-16.6 9.4-22.6l96-96c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 64 320 0z"/>
+                    </svg>
+                    
+                </div>
+                
+
+                <div class="border-2 space-y-1 rounded-lg p-6 border-gray-300 md:w-1/3 hover:border-gray-400">
+                    <p class="mx-1 text-gray-400">To</p>
+
+                    <div class="flex items-center space-x-1 currencyOPt">
+                        <img src="https://flagsapi.com/IN/shiny/64.png" alt="US Flage" class="w-10 h-10" id="toImg" >
+                        <select name="form" id="toValue" class="selectTest w-full  focus:outline-none text-xl cursor-pointer">
+                            <option value="INR">INR</option>
+                            
+                        
+                        </select>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="flex  md:justify-center">
+                <button class="px-10 py-4 bg-[#003f88] mt-16 w-full md:w-53 text-white font-medium text-2xl rounded-lg shadow-lg cursor-pointer  hover:opacity-90" id="btn">
+                    Convert
+                </button>
+            </div>
+
+            <div class="mt-10" id="test">
+                <p class="text-xl font-medium " id="msg1"></p>
+            </div>
+
+            <div class="mt-5" id="test">
+                <p class="text-4xl font-medium text-[#003f88]" id="msg2"></p>
+            </div>
+
+            <div class="mt-5" id="test">
+                <p class="text-lg  text-gray-400" id="msg3"></p>
+            </div>
+
+
+
+                
+        </div>
+
+
+        
+    </section>
+
+   
+
+    <script src="./codes.js"></script>
+    <script src="./index.js"></script>
+    
+    
+</body>
+</html>
